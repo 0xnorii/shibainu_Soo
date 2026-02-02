@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soo's Film Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>🎞️ Soo's Film Gallery</h1>
+        <p>しばいぬそおのフィルム風フォトギャラリー</p>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- スライドショーセクション -->
+        <section class="slideshow-container">
+            <div class="film-frame">
+                <div class="slide fade active">
+                    <img src="images/soo1.jpg" alt="Sooちゃん1">
+                    <div class="caption">お昼寝タイム</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/soo2.jpg" alt="Sooちゃん2">
+                    <div class="caption">ふぁあ</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/soo3.jpg" alt="Sooちゃん3">
+                    <div class="caption">散歩中</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/soo4.jpg" alt="Sooちゃん4">
+                    <div class="caption">肉球</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/soo5.jpg" alt="Sooちゃん5">
+                    <div class="caption">リラックスタイム</div>
+                </div>
+                <div class="slide fade">
+                    <img src="images/soo6.jpg" alt="Sooちゃん6">
+                    <div class="caption">いい夢見てる？</div>
+                </div>
+                
+                <!-- ナビゲーションボタン -->
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+            
+            <!-- ドットナビゲーション -->
+            <div class="dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </section>
+
+        <!-- プロフィールセクション -->
+        <section class="profile">
+            <h2>🐕 Sooのプロフィール</h2>
+            <div class="profile-content">
+                <div class="profile-info">
+                    <p><strong>名前：</strong>赭（そお）</p>
+                    <p><strong>犬種：</strong>しばいぬ</p>
+                    <p><strong>性格：</strong>穏やか、人懐っこい、目でものを言う（吠えない）</p>
+                    <p><strong>好きなこと：</strong>散歩、おやつ、お昼寝</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 今日のSooセクション -->
+        <section class="random-photo">
+            <h2>📸 今日のそお</h2>
+            <button onclick="randomPhoto()" class="random-btn">ランダム表示</button>
+            <div id="random-display"></div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 2026 Soo's Film Gallery | Created with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
